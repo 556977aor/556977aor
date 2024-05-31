@@ -54,6 +54,8 @@ body {
 
 #css::after {
   background-image: url('img/css.svg');
+  width: 45px;
+  height: 45px;
 }
 
 #html::after {
