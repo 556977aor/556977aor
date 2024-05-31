@@ -102,7 +102,7 @@ $html.addEventListener('click', () => {
   <title>Document</title>
 </head>
 <body>
-  <h1>Redflexión Consultores Mola</h1>
+  <h1>Pruebe aquí su código</h1>
 </body>
 </html>
     `
