@@ -124,13 +124,15 @@ document.addEventListener('keyup', (e) => {
 //Borramos todo el código pulsando ESC
 document.addEventListener('keyup', (e) => {
   if (e.key == 'Escape') {
-    resetWeb();
-    $css.value = localStorage.getItem('css');
-    $html.value = localStorage.getItem('html');
-    $js.value = localStorage.getItem('js');
-    showWeb();
-    return
+
+    let conf = confirm("¿Estas seguro de borrar todo tu código?");
+    
+    if (conf) {
+      resetWeb();
+      $css.value = localStorage.getItem('css');
+      $html.value = localStorage.getItem('html');
+      $js.value = localStorage.getItem('js');
+      showWeb();
+    }
   }
-  
-  
 });
