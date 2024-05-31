@@ -49,15 +49,15 @@ body {
 }
 
 #js::after {
-  background-image: url('/img/js.svg');
+  background-image: url('img/js.svg');
 }
 
 #css::after {
-  background-image: url('/img/css.svg');
+  background-image: url('img/css.svg');
 }
 
 #html::after {
-  background-image: url('/img/html.svg');
+  background-image: url('img/html.svg');
   width: 220px;
   height: 90px;
   
