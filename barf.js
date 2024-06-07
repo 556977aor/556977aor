@@ -115,7 +115,8 @@ document.addEventListener('keyup', (e) => {
   if (e.key == 'F4') {
     createZip();
   }
-
+  
+  //Borramos todo el código pulsando ESC
   if (e.key == 'Escape') {
 
     let conf = confirm("¿Estas seguro de borrar todo tu código?");
@@ -130,7 +131,5 @@ document.addEventListener('keyup', (e) => {
   showWeb();
 });
 
-//Borramos todo el código pulsando ESC
-document.addEventListener('keyup', (e) => {
 
-});
+
