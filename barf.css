@@ -50,18 +50,20 @@ body {
 
 #js::after {
   background-image: url('img/js.svg');
+  width: 42px;
+  height: 42px;
 }
 
 #css::after {
   background-image: url('img/css.svg');
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
 }
 
 #html::after {
   background-image: url('img/html.svg');
   width: 220px;
-  height: 90px;
+  height: 80px;
   
 }
 
