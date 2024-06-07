@@ -109,6 +109,12 @@ $html.addEventListener('click', () => {
   showWeb();
 })
 
+// Actualizamos la web al hacer click en cualquier parte (solución al picker color)
+document.addEventListener('click', () => {
+
+  setTimeout(showWeb, 100);
+})
+
 // Cuando se escribe, se actualiza el iframe pasandole la web creada
 document.addEventListener('keyup', (e) => {
 
