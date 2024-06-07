@@ -114,13 +114,8 @@ $html.addEventListener('click', () => {
 document.addEventListener('keyup', (e) => {
   if (e.key == 'F4') {
     createZip();
-    return
   }
-  showWeb();
-});
 
-//Borramos todo el código pulsando ESC
-document.addEventListener('keyup', (e) => {
   if (e.key == 'Escape') {
 
     let conf = confirm("¿Estas seguro de borrar todo tu código?");
@@ -130,7 +125,12 @@ document.addEventListener('keyup', (e) => {
       $css.value = localStorage.getItem('css');
       $html.value = localStorage.getItem('html');
       $js.value = localStorage.getItem('js');
-      showWeb();
     }
   }
+  showWeb();
+});
+
+//Borramos todo el código pulsando ESC
+document.addEventListener('keyup', (e) => {
+
 });
