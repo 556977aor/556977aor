@@ -1,4 +1,4 @@
-// Resize Lines
+/* Resize con Split-grid (librería) */
 Split({
 	columnGutters: [{
     track: 1,
@@ -10,13 +10,13 @@ Split({
   }]
 })
 
-// Selectores
+/* Selectores */
 const $html = document.querySelector('#html');
 const $css = document.querySelector('#css');
 const $js = document.querySelector('#js');
 
 
-// Functions
+/* Funciones */
 // Resetear web a valores iniciales
 function resetWeb() {
   localStorage.setItem('css', '');
@@ -37,7 +37,7 @@ function createWeb () {
 
   return `
   <!DOCTYPE html>
-  <html lang="en">
+  <html lang="es">
   <head>
   <style>
   ${css}
@@ -53,6 +53,7 @@ function createWeb () {
   `
 }
 
+// Mostramos la web creada en el iframe
 function showWeb() {
   const web = createWeb();
   const iframe = document.querySelector('iframe');
@@ -60,29 +61,27 @@ function showWeb() {
   iframe.setAttribute('srcdoc', web);
 }
 
+// Crea y descarga el proyecto en un .zip
 function createZip() {
   let zip = new JSZip();
 
-  // Agrega un archivo de texto 
-
+  // Agrega los tres archivos con el código del usuario
   zip.file("index.html", $html.value);
   zip.file("style.css", $css.value);
   zip.file("main.js", $js.value);
 
   // Genera el archivo zip de forma asíncrona
-
   zip.generateAsync({type:"blob"})
 
   .then(function(content) {
 
-      // Descargar el archivo Zip
-
+      // Descarga el archivo Zip
       saveAs(content, "yourProject.zip");
 
   });
 }
 
-//Aqui empieza la magia
+/* Código principal */
 if (!localStorage.getItem('html')) resetWeb();
 $css.value = localStorage.getItem('css');
 $html.value = localStorage.getItem('html');
@@ -94,7 +93,7 @@ showWeb();
 $html.addEventListener('click', () => {
   if($html.value == '') {
     $html.value = `<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -112,11 +111,13 @@ $html.addEventListener('click', () => {
 
 // Cuando se escribe, se actualiza el iframe pasandole la web creada
 document.addEventListener('keyup', (e) => {
+
+  // Pulsando F4 se descarga el proyecto
   if (e.key == 'F4') {
     createZip();
   }
-  
-  //Borramos todo el código pulsando ESC
+
+  // Borramos todo el código pulsando ESC
   if (e.key == 'Escape') {
 
     let conf = confirm("¿Estas seguro de borrar todo tu código?");
