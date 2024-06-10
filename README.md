@@ -1,5 +1,5 @@
 <h1>BarfYourCode</h1>
-<h2>Editor de código online</h2>
+<h2>Editor de código online basado en <strong>VSCode</strong>strong></h2>
 
 <p>Es sencillo, solo tienes que escribir tu código y verlo funcionar en tiempo real!!!</p>
 
