@@ -15,6 +15,7 @@
 </head>
 <body>
     <div class="grid">
+      <!-- Editores -->
         <div>
           <wc-monaco-editor class="editor" tab-size="2" id="html" language="html"></wc-monaco-editor>
         </div>
@@ -24,9 +25,11 @@
         <div>
           <wc-monaco-editor class="editor" tab-size="2" id="js" language="javascript"></wc-monaco-editor>
         </div>
+        <!-- Iframe para mostrar resultados en tiempo real -->
         <div>
           <iframe srcdoc="" id="iframe"></iframe>
         </div>
+        <!-- Barras para adaptar el tamaño de cada sección -->
         <div class="horizontal-gutter">
         </div>
         <div class="vertical-gutter">

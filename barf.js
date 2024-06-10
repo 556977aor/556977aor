@@ -70,7 +70,7 @@ function createZip() {
   zip.file("style.css", $css.value);
   zip.file("main.js", $js.value);
 
-  // Genera el archivo zip de forma asíncrona
+  // Genera el archivo zip 
   zip.generateAsync({type:"blob"})
 
   .then(function(content) {
@@ -115,7 +115,7 @@ document.addEventListener('click', () => {
   setTimeout(showWeb, 100);
 })
 
-// Cuando se escribe, se actualiza el iframe pasandole la web creada
+// Cuando se pulsa una tecla...
 document.addEventListener('keyup', (e) => {
 
   // Pulsando F4 se descarga el proyecto
@@ -135,6 +135,7 @@ document.addEventListener('keyup', (e) => {
       $js.value = localStorage.getItem('js');
     }
   }
+  // Se actualiza el iframe pasandole la web creada
   showWeb();
 });
 
